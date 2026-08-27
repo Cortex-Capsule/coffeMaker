@@ -1,12 +1,6 @@
 # Instaladores
 Miniforge3-Linux-x86_64.sh
 
-# Framework LeRobot (código clonado — não versionar)
-lerobot/
-
-# Saídas de treino / capturas
-outputs/
-
 # Python
 __pycache__/
 *.py[cod]

@@ -1,0 +1,258 @@
+_wandb:
+    value:
+        cli_version: 0.24.2
+        e:
+            pak2y154ubxdrzz9ulycdytumgkgih38:
+                args:
+                    - --dataset.repo_id
+                    - ilustraviz/firstrainlerobot
+                    - --dataset.video_backend
+                    - pyav
+                    - --policy.type
+                    - act
+                    - --output_dir
+                    - outputs/train/act_training
+                    - --batch_size
+                    - "8"
+                    - --steps
+                    - "50000"
+                    - --save_checkpoint
+                    - "true"
+                    - --save_freq
+                    - "2500"
+                    - --wandb.enable
+                    - "true"
+                    - --wandb.project
+                    - lerobot_training
+                    - --policy.device
+                    - cuda
+                    - --policy.use_amp
+                    - "true"
+                    - --policy.chunk_size
+                    - "50"
+                    - --policy.n_action_steps
+                    - "50"
+                    - --policy.repo_id
+                    - ilustraviz/firstrainlerobot_policy
+                    - --policy.push_to_hub
+                    - "true"
+                cpu_count: 8
+                cpu_count_logical: 16
+                cudaVersion: "13.1"
+                disk:
+                    /:
+                        total: "2014878674944"
+                        used: "200538144768"
+                executable: /home/jonathan/miniforge3/envs/lerobot/bin/python3.12
+                gpu: NVIDIA GeForce RTX 3080
+                gpu_count: 1
+                gpu_nvidia:
+                    - architecture: Ampere
+                      cudaCores: 8960
+                      memoryTotal: "12884901888"
+                      name: NVIDIA GeForce RTX 3080
+                      uuid: GPU-9de2b4de-5915-d885-7639-9bc5004e4f68
+                host: jonathanUbuntu24
+                memory:
+                    total: "67367264256"
+                os: Linux-6.17.0-20-generic-x86_64-with-glibc2.39
+                program: /home/jonathan/miniforge3/envs/lerobot/bin/lerobot-train
+                python: CPython 3.12.13
+                root: outputs/train/act_training
+                startedAt: "2026-04-14T12:21:53.950506Z"
+                writerId: pak2y154ubxdrzz9ulycdytumgkgih38
+        m: []
+        python_version: 3.12.13
+        t:
+            "1":
+                - 1
+                - 41
+                - 49
+                - 51
+                - 71
+                - 83
+            "2":
+                - 1
+                - 41
+                - 49
+                - 51
+                - 71
+                - 83
+            "3":
+                - 13
+                - 15
+                - 16
+            "4": 3.12.13
+            "5": 0.24.2
+            "10":
+                - 21
+            "12": 0.24.2
+            "13": linux-x86_64
+batch_size:
+    value: 8
+checkpoint_path:
+    value: null
+cudnn_deterministic:
+    value: false
+dataset:
+    value:
+        episodes: null
+        image_transforms:
+            enable: false
+            max_num_transforms: 3
+            random_order: false
+            tfs:
+                affine:
+                    kwargs:
+                        degrees:
+                            - -5
+                            - 5
+                        translate:
+                            - 0.05
+                            - 0.05
+                    type: RandomAffine
+                    weight: 1
+                brightness:
+                    kwargs:
+                        brightness:
+                            - 0.8
+                            - 1.2
+                    type: ColorJitter
+                    weight: 1
+                contrast:
+                    kwargs:
+                        contrast:
+                            - 0.8
+                            - 1.2
+                    type: ColorJitter
+                    weight: 1
+                hue:
+                    kwargs:
+                        hue:
+                            - -0.05
+                            - 0.05
+                    type: ColorJitter
+                    weight: 1
+                saturation:
+                    kwargs:
+                        saturation:
+                            - 0.5
+                            - 1.5
+                    type: ColorJitter
+                    weight: 1
+                sharpness:
+                    kwargs:
+                        sharpness:
+                            - 0.5
+                            - 1.5
+                    type: SharpnessJitter
+                    weight: 1
+        repo_id: ilustraviz/firstrainlerobot
+        revision: null
+        root: null
+        streaming: false
+        use_imagenet_stats: true
+        video_backend: pyav
+env:
+    value: null
+eval:
+    value:
+        batch_size: 50
+        n_episodes: 50
+        use_async_envs: false
+eval_freq:
+    value: 20000
+job_name:
+    value: act
+log_freq:
+    value: 200
+num_workers:
+    value: 4
+optimizer:
+    value:
+        betas:
+            - 0.9
+            - 0.999
+        eps: 1e-08
+        grad_clip_norm: 10
+        lr: 1e-05
+        type: adamw
+        weight_decay: 0.0001
+output_dir:
+    value: outputs/train/act_training
+peft:
+    value: null
+policy:
+    value:
+        chunk_size: 50
+        device: cuda
+        dim_feedforward: 3200
+        dim_model: 512
+        dropout: 0.1
+        feedforward_activation: relu
+        kl_weight: 10
+        latent_dim: 32
+        license: null
+        n_action_steps: 50
+        n_decoder_layers: 1
+        n_encoder_layers: 4
+        n_heads: 8
+        n_obs_steps: 1
+        n_vae_encoder_layers: 4
+        normalization_mapping:
+            ACTION: MEAN_STD
+            STATE: MEAN_STD
+            VISUAL: MEAN_STD
+        optimizer_lr: 1e-05
+        optimizer_lr_backbone: 1e-05
+        optimizer_weight_decay: 0.0001
+        pre_norm: false
+        pretrained_backbone_weights: ResNet18_Weights.IMAGENET1K_V1
+        pretrained_path: null
+        private: null
+        push_to_hub: true
+        replace_final_stride_with_dilation: false
+        repo_id: ilustraviz/firstrainlerobot_policy
+        tags: null
+        temporal_ensemble_coeff: null
+        type: act
+        use_amp: true
+        use_peft: false
+        use_vae: true
+        vision_backbone: resnet18
+rabc_epsilon:
+    value: 1e-06
+rabc_head_mode:
+    value: sparse
+rabc_kappa:
+    value: 0.01
+rabc_progress_path:
+    value: null
+resume:
+    value: false
+save_checkpoint:
+    value: true
+save_freq:
+    value: 2500
+scheduler:
+    value: null
+seed:
+    value: 1000
+steps:
+    value: 50000
+tolerance_s:
+    value: 0.0001
+use_policy_training_preset:
+    value: true
+use_rabc:
+    value: false
+wandb:
+    value:
+        add_tags: true
+        disable_artifact: false
+        enable: true
+        entity: null
+        mode: null
+        notes: null
+        project: lerobot_training
+        run_id: null

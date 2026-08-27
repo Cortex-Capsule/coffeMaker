@@ -1,0 +1,33 @@
+INFO 2026-04-14 09:21:55 db_utils.py:117 [1m[34mLogs will be synced with wandb.[0m
+INFO 2026-04-14 09:21:55 db_utils.py:118 Track this run --> [1m[33mhttps://wandb.ai/jonathanhidalgo/lerobot_training/runs/ns5kdt9o[0m
+INFO 2026-04-14 09:21:55 ot_train.py:221 Creating dataset
+INFO 2026-04-14 09:21:55 eo_utils.py:108 Using video codec: libsvtav1
+INFO 2026-04-14 09:21:56 ot_train.py:239 Creating policy
+INFO 2026-04-14 09:21:56 ot_train.py:294 Creating optimizer and scheduler
+INFO 2026-04-14 09:21:56 ot_train.py:329 [1m[33mOutput dir:[0m outputs/train/act_training
+INFO 2026-04-14 09:21:56 ot_train.py:336 cfg.steps=50000 (50K)
+INFO 2026-04-14 09:21:56 ot_train.py:337 dataset.num_frames=4633 (5K)
+INFO 2026-04-14 09:21:56 ot_train.py:338 dataset.num_episodes=5
+INFO 2026-04-14 09:21:56 ot_train.py:341 Effective batch size: 8 x 1 = 8
+INFO 2026-04-14 09:21:56 ot_train.py:342 num_learnable_params=51571590 (52M)
+INFO 2026-04-14 09:21:56 ot_train.py:343 num_total_params=51571590 (52M)
+Training:   0%|                                                                                                                                                                                                                 | 0/50000 [00:00<?, ?step/s]INFO 2026-04-14 09:21:56 ot_train.py:407 Start offline training on a fixed dataset, with effective batch size: 8
+Training:   0%|▍                                                                                                                                                                                                    | 102/50000 [00:16<1:56:58,  7.11step/s]Traceback (most recent call last):
+  File "/home/jonathan/miniforge3/envs/lerobot/bin/lerobot-train", line 6, in <module>
+    sys.exit(main())
+             ^^^^^^
+  File "/media/jonathan/Jonathan_s Files/_coding/LerobotDemo/lerobot/src/lerobot/scripts/lerobot_train.py", line 551, in main
+    train()
+  File "/media/jonathan/Jonathan_s Files/_coding/LerobotDemo/lerobot/src/lerobot/configs/parser.py", line 233, in wrapper_inner
+    response = fn(cfg, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/jonathan/Jonathan_s Files/_coding/LerobotDemo/lerobot/src/lerobot/scripts/lerobot_train.py", line 417, in train
+    train_tracker, output_dict = update_policy(
+                                 ^^^^^^^^^^^^^^
+  File "/media/jonathan/Jonathan_s Files/_coding/LerobotDemo/lerobot/src/lerobot/scripts/lerobot_train.py", line 117, in update_policy
+    loss, output_dict = policy.forward(batch)
+                        ^^^^^^^^^^^^^^^^^^^^^
+  File "/media/jonathan/Jonathan_s Files/_coding/LerobotDemo/lerobot/src/lerobot/policies/act/modeling_act.py", line 148, in forward
+    loss_dict = {"l1_loss": l1_loss.item()}
+                            ^^^^^^^^^^^^^^
+KeyboardInterrupt
