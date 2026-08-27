@@ -1,0 +1,28 @@
+# Instaladores
+Miniforge3-Linux-x86_64.sh
+
+# Framework LeRobot (código clonado — não versionar)
+lerobot/
+
+# Saídas de treino / capturas
+outputs/
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+env/
+
+# Ambientes conda
+miniforge3/
+Miniforge3/
+
+# IDE
+.vscode/
+.idea/
+
+# Sistema
+.DS_Store
+Thumbs.db
